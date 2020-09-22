@@ -1,0 +1,81 @@
+/* game board table */
+body {
+	background-image: url(https://cdn.pixabay.com/photo/2017/08/30/01/05/milky-way-2695569_1280.jpg);
+	background-size: 100% 100%;
+}
+
+h1 {
+	text-align: center;
+	font-size: 50px;
+	font-family: 'Pacifico', cursive;
+	color: chartreuse;
+}
+
+.item {
+	background: radial-gradient(ellipse at center, rgba(237, 242, 247, 0.99) 48%, rgba(38, 122, 217, 0.99) 48%);
+}
+
+#board {
+	margin-left: 30%;
+}
+
+#board td {
+	width: 90px;
+	height: 90px;
+	border: solid 1px #666;
+}
+
+/* pieces are div within game table cells: draw as colored circles */
+
+.piece {
+	/* TODO: make into circles */
+	margin: 5px;
+	width: 80%;
+	height: 80%;
+	border: 2px solid black;
+	border-radius: 50px;
+}
+
+/* TODO: make pieces red/blue,  depending on player 1/2 piece */
+.piece.Player1 {
+	background-color: yellow;
+}
+
+.piece.Player2 {
+	background-color: red;
+}
+
+/* column-top is table row of clickable areas for each column */
+
+#column-top td {
+	border: dashed 1px lightgray;
+	background-color: unset;
+}
+
+#column-top.p1 td:hover {
+	background-color: yellow;
+	border: 2px solid black;
+	border-radius: 50px;
+}
+#column-top td:hover {
+	background-color: red;
+	border: 2px solid black;
+	border-radius: 50px;
+}
+
+.reset {
+	color: lightcoral;
+	font-size: 30px;
+	padding: 10px 30px;
+	margin-top: 20px;
+	margin-left: 47%;
+	border: 3px solid black;
+	border-radius: 5px;
+	background-color: lightblue;
+	font-family: cursive;
+}
+
+.reset:hover {
+	color: lightblue;
+	background-color: lightcoral;
+}
