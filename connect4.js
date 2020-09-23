@@ -98,7 +98,7 @@ function handleClick(evt) {
 		// get x from ID of clicked cell
 		const x = +evt.target.id;
 		const top = document.querySelector('#column-top');
-		top.classList.toggle('p1');
+		
 
 		// get next spot in column (if none, ignore click)
 		const y = findSpotForCol(x);
@@ -110,7 +110,7 @@ function handleClick(evt) {
 		// TODO: add line to update in-memory board
 		placeInTable(y, x);
 		board[y][x] = currPlayer;
-
+		top.classList.toggle('p1');
 		// check for win
 		// check if there is a winner, if so it will run function endgame with the winner player
 		if (checkForWin()) {
